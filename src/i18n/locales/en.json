@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "brand": "Portfolio | Pablo Navarro",
+    "home": "Home",
+    "about": "About me",
+    "technologies": "Technologies",
+    "projects": "Projects",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Hi, I'm",
+    "name": "Pablo Navarro",
+    "role": "Full Stack Developer / Software Engineer",
+    "tagline": "I build web and mobile applications with a focus on quality and teamwork.",
+    "ctaProjects": "See projects",
+    "ctaExperience": "See my experience"
+  },
+  "about": {
+    "title": "About me",
+    "subtitle": "Experience",
+    "bio": "Full Stack Developer with experience in both modern and legacy environments. I focus on application modernization, frontend-backend integration, and agile team collaboration.",
+    "tradestation": {
+      "role": "Intern Full Stack Developer",
+      "company": "TradeStation",
+      "date": "May 2025 - Present",
+      "point1": "Contributed to four projects across modern and legacy environments: migrated an application to Angular 20 and .NET 8 with a Dockerized backend, improving environment consistency and deployments.",
+      "point2": "Enhanced and maintained applications built with .NET Framework, AngularJS, and Visual Basic on IIS: new features and system reliability without disrupting business operations.",
+      "point3": "Developed an internal tool with Retool. Version control and CI/CD with GitLab, deployments with Octopus Deploy, and Scrum-based agile teams using Jira."
+    },
+    "factork": {
+      "role": "Intern Developer",
+      "company": "Factor K Software",
+      "date": "January 2025 - April 2025",
+      "point1": "Contributed to the development and maintenance of a cross-platform mobile application using React Native, working with .NET (C#) backend services.",
+      "point2": "Worked across the full-stack: frontend-backend integration with APIs, debugging, and smooth communication between application layers.",
+      "point3": "Collaborated in a Scrum-based agile team (sprint planning, daily stand-ups, iterative delivery). Git with branching strategies and Azure DevOps for task and sprint management."
+    }
+  },
+  "technologies": {
+    "title": "Technologies I use",
+    "subtitle": "Tools and languages I work with",
+    "frontend": "Front-End",
+    "backend": "Back-End",
+    "languages": "Programming languages",
+    "testing": "Testing",
+    "databases": "Databases",
+    "versionControl": "Repositories & version control",
+    "cloud": "Cloud"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Academic and professional work",
+    "viewCode": "View source code",
+    "technologies": "Technologies",
+    "contributions": "Key contributions",
+    "impact": "Impact",
+    "edusmart": {
+      "title": "EduSmart – AI-Powered Educational Platform",
+      "description": "AI-powered web platform for primary and secondary students in Costa Rica, designed to teach national history in a playful, immersive way. It combines animated stories, audio narrations, interactive quizzes, and gamified modules, supporting different learning styles.",
+      "contribution1": "Developed frontend and backend architecture using Angular 17 and Spring Boot 3.",
+      "contribution2": "Implemented secure authentication and role-based access with Google OAuth and JWT.",
+      "contribution3": "Built core modules: animated stories, interactive quizzes, gamified achievements, and historical timeline.",
+      "contribution4": "Integrated DeepSeek AI for an educational chatbot and automatic quiz generation based on student progress.",
+      "contribution5": "Configured CI with GitHub Actions for automated testing and reliable deployments.",
+      "impact": "Engaging platform that enhances historical knowledge retention, enables teachers and parents to track learning, and provides a scalable, secure foundation for future enhancements."
+    },
+    "canelaVainilla": {
+      "title": "Canela & Vainilla – Bakery Web Platform",
+      "description": "Online bakery platform designed to provide a smooth, secure, and fully responsive shopping experience. Team project combining modern frontend and backend technologies with cloud services for a scalable, high-performance application.",
+      "contribution1": "Secure user registration and authentication.",
+      "contribution2": "Intuitive product catalog with optimized filtering and search.",
+      "contribution3": "Full shopping cart management with dynamic quantity updates and automatic total calculation.",
+      "contribution4": "Integrated secure payment system for completing purchases on the platform.",
+      "contribution5": "Serverless backend with AWS Lambda, API Gateway, and DynamoDB for efficient data handling and high availability.",
+      "contribution6": "Hosting and deployment using AWS Amplify for global accessibility and seamless deployment workflows.",
+      "impact": "Scalable, high-performance application combining modern frontend with serverless AWS architecture, globally accessible and easy to maintain."
+    },
+    "trafficTicket": {
+      "title": "Traffic Ticket Management System",
+      "description": "Traffic ticket management system developed by a team of five in collaboration with Universidad Cenfotec. React for the UI, .NET with Entity Framework for business logic, and MSSQL. Git and Azure DevOps for version control, CI, and project workflow; full SDLC and Scrum methodology.",
+      "contribution1": "Team development: React for the UI, .NET with Entity Framework for business logic, and MSSQL as the database.",
+      "contribution2": "Git for version control and Azure DevOps for tasks, continuous integration, and project workflow.",
+      "contribution3": "Full Software Development Life Cycle (SDLC) and Scrum: sprints, constant communication, and adaptation to changes.",
+      "contribution4": "Security: two-factor authentication, email notifications, secure password validation and recovery.",
+      "contribution5": "Sensitive data in separate databases to ensure confidentiality.",
+      "contribution6": "Configurable roles (Officers, Judges, Administrators, Final Users) with permissions for creating and editing tickets, resolving disputes, and generating reports.",
+      "impact": "Scalable, secure solution providing an agile and efficient experience for comprehensive traffic ticket management."
+    },
+    "pokemonBattles": {
+      "title": "Pokemon Battles Game",
+      "description": "Pokemon battle web application developed through the full SDLC. Technical lead of a six-person team; stack: EJS, JavaScript, Node.js, HTML, CSS, and MongoDB. Platform for local battles and multiplayer (challenge friends).",
+      "contribution1": "Technical lead of a six-person team; fullstack application with EJS, JavaScript, Node.js, HTML, CSS, and MongoDB.",
+      "contribution2": "Full Software Development Life Cycle (SDLC); platform with local battles and friend connection for challenges.",
+      "contribution3": "Secure registration and login; customizable profiles and immersive battle experience.",
+      "contribution4": "External API integration for up-to-date Pokemon data; variety of creatures to build and strengthen teams.",
+      "contribution5": "MongoDB for user profiles, battle history, and statistics; friend lists, history, and player rankings.",
+      "contribution6": "Frontend design and backend architecture with efficient data flow across all modules.",
+      "impact": "Engaging platform showcasing fullstack skills plus leadership and teamwork, for entertainment and social connection."
+    }
+  },
+  "education": {
+    "title": "Education"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Get in touch",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "whatsapp": "Chat on WhatsApp",
+    "nameRequired": "Name is required",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Invalid email",
+    "messageRequired": "Message is required",
+    "success": "Message sent successfully",
+    "error": "Error sending message"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  }
+}

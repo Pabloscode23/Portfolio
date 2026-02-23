@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "brand": "Portafolio | Pablo Navarro",
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "technologies": "Tecnologías",
+    "projects": "Proyectos",
+    "education": "Educación",
+    "contact": "Contacto"
+  },
+  "home": {
+    "title": "Hola, soy",
+    "name": "Pablo Navarro",
+    "role": "Desarrollador Full Stack / Ingeniero de Software",
+    "tagline": "Construyo aplicaciones web y móviles con enfoque en calidad y trabajo en equipo.",
+    "ctaProjects": "Ver proyectos",
+    "ctaExperience": "Ver mi experiencia"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "subtitle": "Experiencia",
+    "bio": "Desarrollador Full Stack con experiencia en entornos modernos y legacy. Me enfoco en modernización de aplicaciones, integración frontend-backend y trabajo en equipos ágiles.",
+    "tradestation": {
+      "role": "Intern Full Stack Developer",
+      "company": "TradeStation",
+      "date": "Mayo 2025 - Presente",
+      "point1": "Contribuí en cuatro proyectos (entornos modernos y legacy): migración de una aplicación a Angular 20 y .NET 8 con backend containerizado en Docker, mejorando consistencia de entornos y despliegues.",
+      "point2": "Mantenimiento y evolución de aplicaciones con .NET Framework, AngularJS y Visual Basic en IIS: nuevas funcionalidades y estabilidad del sistema sin interrumpir operaciones.",
+      "point3": "Desarrollo de herramienta interna con Retool. Control de versiones y CI/CD con GitLab, despliegues con Octopus Deploy, y trabajo en equipos Scrum con Jira."
+    },
+    "factork": {
+      "role": "Intern Developer",
+      "company": "Factor K Software",
+      "date": "Enero 2025 - Abril 2025",
+      "point1": "Desarrollo y mantenimiento de una aplicación móvil multiplataforma con React Native, en conjunto con servicios backend en .NET (C#).",
+      "point2": "Trabajo full-stack: integración de frontend con APIs, depuración y comunicación entre capas de la aplicación.",
+      "point3": "Participación en equipo Scrum (planificación de sprints, stand-ups, entregas iterativas). Git con estrategias de branching y Azure DevOps para tareas y sprints."
+    }
+  },
+  "technologies": {
+    "title": "Tecnologías que domino",
+    "subtitle": "Herramientas y lenguajes con los que trabajo",
+    "frontend": "Front-End",
+    "backend": "Back-End",
+    "languages": "Lenguajes de programación",
+    "testing": "Testing",
+    "databases": "Bases de datos",
+    "versionControl": "Repositorios y control de versiones",
+    "cloud": "Cloud"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Trabajos académicos y profesionales",
+    "viewCode": "Ver código fuente",
+    "technologies": "Tecnologías",
+    "contributions": "Contribuciones clave",
+    "impact": "Impacto",
+    "edusmart": {
+      "title": "EduSmart – Plataforma educativa con IA",
+      "description": "Plataforma web con IA para estudiantes de primaria y secundaria en Costa Rica, que enseña historia nacional de forma lúdica e inmersiva. Combina historias animadas, narraciones en audio, quizzes interactivos y módulos gamificados, apoyando distintos estilos de aprendizaje.",
+      "contribution1": "Arquitectura frontend y backend con Angular 17 y Spring Boot 3.",
+      "contribution2": "Autenticación segura y acceso por roles con Google OAuth y JWT.",
+      "contribution3": "Módulos principales: historias animadas, quizzes interactivos, logros gamificados y línea de tiempo histórica.",
+      "contribution4": "Integración de IA DeepSeek: chatbot educativo y generación automática de quizzes según el progreso del estudiante.",
+      "contribution5": "CI con GitHub Actions para pruebas automatizadas y despliegues confiables.",
+      "impact": "Plataforma que mejora la retención de conocimiento histórico y permite a docentes y padres hacer seguimiento del aprendizaje, con base escalable y segura para futuras mejoras."
+    },
+    "canelaVainilla": {
+      "title": "Canela & Vainilla – Plataforma web de pastelería",
+      "description": "Plataforma de pastelería en línea que ofrece una experiencia de compra fluida, segura y totalmente responsive. Proyecto en equipo que combina frontend y backend modernos con servicios en la nube para una aplicación escalable y de alto rendimiento.",
+      "contribution1": "Registro y autenticación de usuarios de forma segura.",
+      "contribution2": "Catálogo de productos con navegación intuitiva, filtros y búsqueda optimizados.",
+      "contribution3": "Carrito de compras con actualización dinámica de cantidades y cálculo automático del total.",
+      "contribution4": "Sistema de pago seguro integrado para completar compras en la plataforma.",
+      "contribution5": "Backend serverless con AWS Lambda, API Gateway y DynamoDB para manejo eficiente de datos y alta disponibilidad.",
+      "contribution6": "Hosting y despliegue con AWS Amplify para accesibilidad global y flujos de despliegue ágiles.",
+      "impact": "Aplicación escalable y de alto rendimiento que combina frontend moderno con arquitectura serverless en AWS, accesible globalmente y fácil de mantener."
+    },
+    "trafficTicket": {
+      "title": "Traffic Ticket Management System",
+      "description": "Sistema de gestión de multas de tránsito desarrollado en equipo de cinco personas en colaboración con Universidad Cenfotec. Interfaz con React, lógica de negocio con .NET y Entity Framework, y MSSQL. Git y Azure DevOps para control de versiones, CI y flujo de trabajo; SDLC completo y metodología Scrum.",
+      "contribution1": "Desarrollo en equipo: React para la UI, .NET con Entity Framework para la lógica de negocio y MSSQL como base de datos.",
+      "contribution2": "Git para control de versiones y Azure DevOps para tareas, integración continua y flujo del proyecto.",
+      "contribution3": "Ciclo de vida de desarrollo (SDLC) completo y Scrum: sprints, comunicación constante y adaptación a cambios.",
+      "contribution4": "Seguridad: autenticación de dos factores, notificaciones por correo, validación y recuperación segura de contraseñas.",
+      "contribution5": "Datos sensibles en bases de datos separadas para garantizar confidencialidad.",
+      "contribution6": "Roles configurables (Oficiales, Jueces, Administradores, Usuarios finales) con permisos para crear y editar multas, resolver disputas y generar reportes.",
+      "impact": "Solución escalable y segura que ofrece una experiencia ágil y eficiente para la gestión integral de multas de tránsito."
+    },
+    "pokemonBattles": {
+      "title": "Pokemon Battles Game",
+      "description": "Aplicación web de batallas Pokémon desarrollada durante todo el SDLC. Lideré técnicamente un equipo de seis personas; stack: EJS, JavaScript, Node.js, HTML, CSS y MongoDB. Plataforma para batallas locales y multijugador (desafiar amigos).",
+      "contribution1": "Liderazgo técnico de un equipo de seis personas; aplicación fullstack con EJS, JavaScript, Node.js, HTML, CSS y MongoDB.",
+      "contribution2": "Ciclo de vida de desarrollo (SDLC) completo; plataforma con batallas locales y conexión con amigos para desafíos.",
+      "contribution3": "Registro y login seguros; perfiles personalizables y experiencia de batalla inmersiva.",
+      "contribution4": "Integración de API externa para datos actualizados de Pokémon; equipos variados para armar y fortalecer.",
+      "contribution5": "MongoDB para perfiles, historial de batallas y estadísticas; listas de amigos, historial y rankings.",
+      "contribution6": "Diseño frontend y arquitectura backend con flujo de datos eficiente en todos los módulos.",
+      "impact": "Plataforma entretenida que combina desarrollo fullstack con liderazgo y trabajo en equipo, pensada para ocio y conexión social."
+    }
+  },
+  "education": {
+    "title": "Educación"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Escríbeme",
+    "name": "Nombre",
+    "email": "Correo",
+    "message": "Mensaje",
+    "send": "Enviar",
+    "whatsapp": "Chatear por WhatsApp",
+    "nameRequired": "El nombre es obligatorio",
+    "emailRequired": "El correo es obligatorio",
+    "emailInvalid": "Correo no válido",
+    "messageRequired": "El mensaje es obligatorio",
+    "success": "Mensaje enviado correctamente",
+    "error": "Error al enviar el mensaje"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  }
+}
