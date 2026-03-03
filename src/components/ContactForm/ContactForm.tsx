@@ -1,5 +1,6 @@
-import { useState, FormEvent } from 'react'
+import { useState, useEffect, FormEvent } from 'react'
 import { useTranslation } from 'react-i18next'
+import { FORMSPREE_FORM_ID } from '@/constants/contact'
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -10,6 +11,13 @@ export function ContactForm() {
   const [message, setMessage] = useState('')
   const [errors, setErrors] = useState<{ name?: string; email?: string; message?: string }>({})
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [submitting, setSubmitting] = useState(false)
+
+  useEffect(() => {
+    if (status !== 'success') return
+    const timer = setTimeout(() => setStatus('idle'), 3000)
+    return () => clearTimeout(timer)
+  }, [status])
 
   const validate = (): boolean => {
     const next: typeof errors = {}
@@ -21,16 +29,30 @@ export function ContactForm() {
     return Object.keys(next).length === 0
   }
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
     setStatus('idle')
     if (!validate()) return
-    // TODO: integrate with Formspree, EmailJS or your backend
-    setStatus('success')
-    setName('')
-    setEmail('')
-    setMessage('')
-    setErrors({})
+    setSubmitting(true)
+    try {
+      if (FORMSPREE_FORM_ID) {
+        const res = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: name.trim(), email: email.trim(), message: message.trim() }),
+        })
+        if (!res.ok) throw new Error('Send failed')
+      }
+      setStatus('success')
+      setName('')
+      setEmail('')
+      setMessage('')
+      setErrors({})
+    } catch {
+      setStatus('error')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -107,9 +129,10 @@ export function ContactForm() {
       )}
       <button
         type="submit"
-        className="w-full rounded-lg bg-accent py-3 font-medium text-white transition-colors duration-300 hover:bg-accent-light focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary-950"
+        disabled={submitting}
+        className="w-full rounded-lg bg-accent py-3 font-medium text-white transition-colors duration-300 hover:bg-accent-light focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary-950 disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {t('contact.send')}
+        {submitting ? t('contact.sending') : t('contact.send')}
       </button>
     </form>
   )

@@ -20,7 +20,7 @@ export function About() {
         aria-hidden
       />
 
-      <div className="relative mx-auto max-w-4xl">
+      <div className="relative mx-auto max-w-6xl">
         <header className="mb-14">
           <h2
             id="about-heading"

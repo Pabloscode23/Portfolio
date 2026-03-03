@@ -25,9 +25,15 @@ export function Projects() {
           <h2 id="projects-heading" className="text-4xl font-bold text-primary-50 sm:text-5xl tracking-tight">
             {t('projects.title')}
           </h2>
-          <p className="mt-3 text-lg text-primary-400">
-            {t('projects.subtitle')}
-          </p>
+          <div className="mt-4 flex items-center gap-3">
+            <span
+              className="h-0.5 w-12 rounded-full bg-accent/80 shrink-0"
+              aria-hidden
+            />
+            <p className="text-lg text-primary-400">
+              {t('projects.subtitle')}
+            </p>
+          </div>
         </header>
 
         <ul className="grid grid-cols-1 gap-8 md:grid-cols-2">

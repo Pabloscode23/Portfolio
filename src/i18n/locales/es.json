@@ -100,7 +100,41 @@
     }
   },
   "education": {
-    "title": "Educación"
+    "title": "Educación",
+    "subtitle": "Formación académica y certificaciones",
+    "university": {
+      "degree": "Bachillerato en ingeniería de software",
+      "school": "Universidad Cenfotec"
+    },
+    "certifications": {
+      "title": "Certificaciones",
+      "showCredential": "Mostrar credencial",
+      "scrum": {
+        "name": "Scrum Fundamentals Certified",
+        "issuer": "SCRUMstudy - Organismo de acreditación para Scrum y Agile",
+        "skills": "Scrum"
+      },
+      "freecodecamp": {
+        "name": "Algoritmos y estructuras de datos en JavaScript",
+        "issuer": "freeCodeCamp",
+        "skills": "JavaScript"
+      },
+      "efset": {
+        "name": "Nivel de inglés C2",
+        "issuer": "EF SET",
+        "skills": ""
+      },
+      "udemy": {
+        "name": "El curso más completo de testing - Bootcamp de 0 a 100",
+        "issuer": "Udemy",
+        "skills": ""
+      },
+      "udacity": {
+        "name": "Programación para Ciencia de Datos con Python",
+        "issuer": "Udacity",
+        "skills": ""
+      }
+    }
   },
   "contact": {
     "title": "Contacto",
@@ -109,6 +143,7 @@
     "email": "Correo",
     "message": "Mensaje",
     "send": "Enviar",
+    "sending": "Enviando…",
     "whatsapp": "Chatear por WhatsApp",
     "nameRequired": "El nombre es obligatorio",
     "emailRequired": "El correo es obligatorio",

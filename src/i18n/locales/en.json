@@ -100,7 +100,41 @@
     }
   },
   "education": {
-    "title": "Education"
+    "title": "Education",
+    "subtitle": "Academic background and certifications",
+    "university": {
+      "degree": "Bachelor's degree in Software Engineering",
+      "school": "Cenfotec University"
+    },
+    "certifications": {
+      "title": "Certifications",
+      "showCredential": "Show credential",
+      "scrum": {
+        "name": "Scrum Fundamentals Certified",
+        "issuer": "SCRUMstudy - Accreditation Body for Scrum and Agile",
+        "skills": "Scrum"
+      },
+      "freecodecamp": {
+        "name": "JavaScript Algorithms and Data Structures",
+        "issuer": "freeCodeCamp",
+        "skills": "JavaScript"
+      },
+      "efset": {
+        "name": "C2 English level",
+        "issuer": "EF SET",
+        "skills": ""
+      },
+      "udemy": {
+        "name": "The most complete testing course - Bootcamp from 0 to 100",
+        "issuer": "Udemy",
+        "skills": ""
+      },
+      "udacity": {
+        "name": "Programming for Data Science with Python",
+        "issuer": "Udacity",
+        "skills": ""
+      }
+    }
   },
   "contact": {
     "title": "Contact",
@@ -109,6 +143,7 @@
     "email": "Email",
     "message": "Message",
     "send": "Send",
+    "sending": "Sending…",
     "whatsapp": "Chat on WhatsApp",
     "nameRequired": "Name is required",
     "emailRequired": "Email is required",

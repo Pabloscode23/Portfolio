@@ -7,8 +7,8 @@ import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle'
 const NAV_ITEMS: NavItem[] = [
   { id: 'home', labelKey: 'nav.home', href: '#home' },
   { id: 'about', labelKey: 'nav.about', href: '#about' },
-  { id: 'technologies', labelKey: 'nav.technologies', href: '#technologies' },
   { id: 'projects', labelKey: 'nav.projects', href: '#projects' },
+  { id: 'technologies', labelKey: 'nav.technologies', href: '#technologies' },
   { id: 'education', labelKey: 'nav.education', href: '#education' },
   { id: 'contact', labelKey: 'nav.contact', href: '#contact' },
 ]
@@ -28,12 +28,12 @@ export function Header() {
         <a
           href="#home"
           onClick={closeMobile}
-          className="flex items-center gap-3 text-primary-100 hover:text-accent transition-colors duration-200"
+          className="group flex items-center gap-3 rounded-xl px-2 py-1.5 -mx-2 -my-1.5 text-primary-100 hover:text-accent transition-all duration-200 hover:bg-primary-800/40 active:scale-[0.98]"
         >
           <img
             src="/src/assets/PabloCode-modified.png"
             alt=""
-            className="h-10 w-10 shrink-0 rounded-full object-cover"
+            className="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-transparent group-hover:ring-accent/40 transition-all duration-200"
           />
           <span className="text-xl font-semibold">{t('nav.brand')}</span>
         </a>

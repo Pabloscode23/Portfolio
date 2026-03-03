@@ -10,17 +10,23 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="scroll-mt-20 py-20 px-4 sm:px-6 lg:px-8"
+      className="relative scroll-mt-20 overflow-hidden py-24 px-4 sm:px-6 lg:px-8"
       aria-labelledby="contact-heading"
     >
-      <div className="mx-auto max-w-6xl">
-        <h2 id="contact-heading" className="text-3xl font-bold text-primary-50 sm:text-4xl">
+      <div className="relative mx-auto max-w-6xl">
+        <h2 id="contact-heading" className="text-4xl font-bold text-primary-50 sm:text-5xl tracking-tight">
           {t('contact.title')}
         </h2>
-        <p className="mt-2 text-primary-400">
-          {t('contact.subtitle')}
-        </p>
-        <div className="mt-10 flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
+        <div className="mt-4 flex items-center gap-3">
+          <span
+            className="h-0.5 w-12 rounded-full bg-accent/80 shrink-0"
+            aria-hidden
+          />
+          <p className="text-lg text-primary-400">
+            {t('contact.subtitle')}
+          </p>
+        </div>
+        <div className="mt-14 flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
           <div className="flex-1">
             <ContactForm />
           </div>
