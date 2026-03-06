@@ -11,6 +11,7 @@ export function ContactForm() {
   const [message, setMessage] = useState('')
   const [errors, setErrors] = useState<{ name?: string; email?: string; message?: string }>({})
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [errorMessage, setErrorMessage] = useState('')
   const [submitting, setSubmitting] = useState(false)
 
   useEffect(() => {
@@ -32,6 +33,7 @@ export function ContactForm() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
     setStatus('idle')
+    setErrorMessage('')
     if (!validate()) return
     setSubmitting(true)
     try {
@@ -49,19 +51,22 @@ export function ContactForm() {
           email: email.trim(),
           message: message.trim(),
         }),
+        redirect: 'manual',
       })
-      if (!res.ok) {
+      const accepted = res.ok || res.status === 302
+      if (!accepted) {
         const data = await res.json().catch(() => ({}))
         const msg = Array.isArray(data?.errors) ? data.errors.map((e: { message?: string }) => e.message).filter(Boolean).join(', ') : ''
-        throw new Error(msg || 'Send failed')
+        throw new Error(msg || `Send failed (${res.status})`)
       }
       setStatus('success')
       setName('')
       setEmail('')
       setMessage('')
       setErrors({})
-    } catch {
+    } catch (err) {
       setStatus('error')
+      setErrorMessage(err instanceof Error ? err.message : '')
     } finally {
       setSubmitting(false)
     }
@@ -137,6 +142,7 @@ export function ContactForm() {
       {status === 'error' && (
         <p className="text-sm text-red-400" role="alert">
           {t('contact.error')}
+          {errorMessage && <span className="block mt-1 opacity-90">({errorMessage})</span>}
         </p>
       )}
       <button
