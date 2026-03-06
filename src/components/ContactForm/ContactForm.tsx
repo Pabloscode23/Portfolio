@@ -11,7 +11,6 @@ export function ContactForm() {
   const [message, setMessage] = useState('')
   const [errors, setErrors] = useState<{ name?: string; email?: string; message?: string }>({})
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
-  const [errorMessage, setErrorMessage] = useState('')
   const [submitting, setSubmitting] = useState(false)
 
   useEffect(() => {
@@ -33,7 +32,6 @@ export function ContactForm() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
     setStatus('idle')
-    setErrorMessage('')
     if (!validate()) return
     setSubmitting(true)
     try {
@@ -64,9 +62,8 @@ export function ContactForm() {
       setEmail('')
       setMessage('')
       setErrors({})
-    } catch (err) {
+    } catch {
       setStatus('error')
-      setErrorMessage(err instanceof Error ? err.message : '')
     } finally {
       setSubmitting(false)
     }
@@ -142,7 +139,6 @@ export function ContactForm() {
       {status === 'error' && (
         <p className="text-sm text-red-400" role="alert">
           {t('contact.error')}
-          {errorMessage && <span className="block mt-1 opacity-90">({errorMessage})</span>}
         </p>
       )}
       <button
