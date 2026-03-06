@@ -35,14 +35,15 @@ export function ContactForm() {
     if (!validate()) return
     setSubmitting(true)
     try {
-      if (FORMSPREE_FORM_ID) {
-        const res = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name: name.trim(), email: email.trim(), message: message.trim() }),
-        })
-        if (!res.ok) throw new Error('Send failed')
+      if (!FORMSPREE_FORM_ID) {
+        throw new Error('Form not configured')
       }
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: name.trim(), email: email.trim(), message: message.trim() }),
+      })
+      if (!res.ok) throw new Error('Send failed')
       setStatus('success')
       setName('')
       setEmail('')

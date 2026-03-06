@@ -32,6 +32,7 @@ jobs:
       - name: Build
         env:
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
+          VITE_FORMSPREE_FORM_ID: ${{ secrets.FORMSPREE_FORM_ID }}
         run: npm run build
 
       - name: Setup Pages
