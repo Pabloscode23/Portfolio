@@ -40,10 +40,21 @@ export function ContactForm() {
       }
       const res = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: name.trim(), email: email.trim(), message: message.trim() }),
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: name.trim(),
+          email: email.trim(),
+          message: message.trim(),
+        }),
       })
-      if (!res.ok) throw new Error('Send failed')
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}))
+        const msg = Array.isArray(data?.errors) ? data.errors.map((e: { message?: string }) => e.message).filter(Boolean).join(', ') : ''
+        throw new Error(msg || 'Send failed')
+      }
       setStatus('success')
       setName('')
       setEmail('')
