@@ -31,7 +31,7 @@ export function Header() {
           className="group flex items-center gap-3 rounded-xl px-2 py-1.5 -mx-2 -my-1.5 text-primary-100 hover:text-accent transition-all duration-200 hover:bg-primary-800/40 active:scale-[0.98]"
         >
           <img
-            src="/src/assets/PabloCode-modified.png"
+            src={`${import.meta.env.BASE_URL}src/assets/PabloCode-modified.png`}
             alt=""
             className="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-transparent group-hover:ring-accent/40 transition-all duration-200"
           />

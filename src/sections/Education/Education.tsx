@@ -41,7 +41,7 @@ export function Education() {
         <article className="rounded-2xl border border-white/[0.06] bg-primary-950/80 p-6 sm:p-8 shadow-card backdrop-blur-sm transition-all duration-300 hover:border-accent/20 hover:shadow-card-hover mb-12">
           <div className="flex items-start gap-5">
             <img
-              src="/src/assets/cenfoteclogo.jpg"
+              src={`${import.meta.env.BASE_URL}src/assets/cenfoteclogo.jpg`}
               alt={t('education.university.school')}
               className="h-14 w-14 shrink-0 rounded-xl object-contain bg-white border border-white/[0.06]"
             />
