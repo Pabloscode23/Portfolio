@@ -241,6 +241,16 @@ html:not([data-theme="light"]) body {
   color: #737373 !important;
 }
 
+[data-theme="light"] #contact .text-red-400,
+[data-theme="light"] #contact p.text-red-400 {
+  color: #f87171 !important;
+}
+
+[data-theme="light"] #contact .text-green-400,
+[data-theme="light"] #contact p.text-green-400 {
+  color: #4ade80 !important;
+}
+
 [data-theme="light"] .LanguageSwitch {
   background-color: #e5e5e5 !important;
 }
