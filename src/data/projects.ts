@@ -1,4 +1,33 @@
 import type { Project } from '@/types'
+import proyOne1 from '@/assets/ProyOne-one.jpeg'
+import proyOne2 from '@/assets/ProyOne-two.jpeg'
+import proyOne3 from '@/assets/ProyOne-three.jpeg'
+import proyOne4 from '@/assets/ProyOne-four.jpeg'
+import proyOne5 from '@/assets/ProyOne-five.jpeg'
+import proyOne6 from '@/assets/ProyOne-six.jpeg'
+import proyOne7 from '@/assets/ProyOne-seven.jpeg'
+import proyOne8 from '@/assets/ProyOne-eight.jpeg'
+import proyTwo1 from '@/assets/ProyTwo-one.jpeg'
+import proyTwo2 from '@/assets/ProyTwo-two.jpeg'
+import proyTwo3 from '@/assets/ProyTwo-three.jpeg'
+import proyTwo4 from '@/assets/ProyTwo-four.jpeg'
+import proyTwo5 from '@/assets/ProyTwo-five.jpeg'
+import proyTwo6 from '@/assets/ProyTwo-six.jpeg'
+import proyTwo7 from '@/assets/ProyTwo-seven.jpeg'
+import proyTwo8 from '@/assets/ProyTwo-eight.jpeg'
+import proyThree1 from '@/assets/ProyThree-one.jpeg'
+import proyThree2 from '@/assets/ProyThree-two.jpeg'
+import proyThree3 from '@/assets/ProyThree-three.jpeg'
+import proyThree4 from '@/assets/ProyThree-four.jpeg'
+import proyThree5 from '@/assets/ProyThree-five.jpeg'
+import proyThree6 from '@/assets/ProyThree-six.jpeg'
+import proyThree7 from '@/assets/ProyThree-seven.jpeg'
+import proyThree8 from '@/assets/ProyThree-eight.jpeg'
+import proyThree9 from '@/assets/ProyThree-nine.jpeg'
+import proyFour1 from '@/assets/ProyFour-one.jpeg'
+import proyFour2 from '@/assets/ProyFour-two.jpeg'
+import proyFour3 from '@/assets/ProyFour-three.jpeg'
+import proyFour4 from '@/assets/ProyFour-four.jpeg'
 
 export const projects: Project[] = [
   {
@@ -6,14 +35,14 @@ export const projects: Project[] = [
     titleKey: 'edusmart',
     type: 'group',
     images: [
-      '/src/assets/ProyOne-one.jpeg',
-      '/src/assets/ProyOne-two.jpeg',
-      '/src/assets/ProyOne-three.jpeg',
-      '/src/assets/ProyOne-four.jpeg',
-      '/src/assets/ProyOne-five.jpeg',
-      '/src/assets/ProyOne-six.jpeg',
-      '/src/assets/ProyOne-seven.jpeg',
-      '/src/assets/ProyOne-eight.jpeg',
+      proyOne1,
+      proyOne2,
+      proyOne3,
+      proyOne4,
+      proyOne5,
+      proyOne6,
+      proyOne7,
+      proyOne8,
     ],
     technologies: [
       'Angular 17',
@@ -36,14 +65,14 @@ export const projects: Project[] = [
     titleKey: 'canelaVainilla',
     type: 'group',
     images: [
-      '/src/assets/ProyTwo-one.jpeg',
-      '/src/assets/ProyTwo-two.jpeg',
-      '/src/assets/ProyTwo-three.jpeg',
-      '/src/assets/ProyTwo-four.jpeg',
-      '/src/assets/ProyTwo-five.jpeg',
-      '/src/assets/ProyTwo-six.jpeg',
-      '/src/assets/ProyTwo-seven.jpeg',
-      '/src/assets/ProyTwo-eight.jpeg',
+      proyTwo1,
+      proyTwo2,
+      proyTwo3,
+      proyTwo4,
+      proyTwo5,
+      proyTwo6,
+      proyTwo7,
+      proyTwo8,
     ],
     technologies: [
       'React',
@@ -64,15 +93,15 @@ export const projects: Project[] = [
     titleKey: 'trafficTicket',
     type: 'group',
     images: [
-      '/src/assets/ProyThree-one.jpeg',
-      '/src/assets/ProyThree-two.jpeg',
-      '/src/assets/ProyThree-three.jpeg',
-      '/src/assets/ProyThree-four.jpeg',
-      '/src/assets/ProyThree-five.jpeg',
-      '/src/assets/ProyThree-six.jpeg',
-      '/src/assets/ProyThree-seven.jpeg',
-      '/src/assets/ProyThree-eight.jpeg',
-      '/src/assets/ProyThree-nine.jpeg',
+      proyThree1,
+      proyThree2,
+      proyThree3,
+      proyThree4,
+      proyThree5,
+      proyThree6,
+      proyThree7,
+      proyThree8,
+      proyThree9,
     ],
     technologies: [
       'React',
@@ -92,10 +121,10 @@ export const projects: Project[] = [
     titleKey: 'pokemonBattles',
     type: 'group',
     images: [
-      '/src/assets/ProyFour-one.jpeg',
-      '/src/assets/ProyFour-two.jpeg',
-      '/src/assets/ProyFour-three.jpeg',
-      '/src/assets/ProyFour-four.jpeg',
+      proyFour1,
+      proyFour2,
+      proyFour3,
+      proyFour4,
     ],
     technologies: [
       'JavaScript',
