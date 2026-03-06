@@ -7,7 +7,7 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={toggleTheme}
-      className="rounded-lg p-2 text-primary-200 hover:text-accent hover:bg-primary-800/50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent"
+      className="rounded-lg p-2 min-w-[2.5rem] min-h-[2.5rem] flex items-center justify-center overflow-hidden text-primary-200 hover:text-accent hover:bg-primary-800/50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent"
       aria-label={theme === 'dark' ? 'Activar modo claro' : 'Activar modo oscuro'}
       title={theme === 'dark' ? 'Modo claro' : 'Modo oscuro'}
     >

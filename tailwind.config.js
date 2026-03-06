@@ -28,9 +28,9 @@ export default {
           mid: '#1e293b',
         },
         accent: {
-          DEFAULT: '#0ea5e9',
-          light: '#38bdf8',
-          dark: '#0284c7',
+          DEFAULT: '#3B9FD6',
+          light: '#3B9FD6',
+          dark: '#3B9FD6',
         },
       },
       fontFamily: {
@@ -52,7 +52,7 @@ export default {
       },
       boxShadow: {
         'card': '0 4px 24px -4px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.04)',
-        'card-hover': '0 24px 48px -12px rgba(0,0,0,0.5), 0 0 0 1px rgba(14,165,233,0.12)',
+        'card-hover': '0 24px 48px -12px rgba(0,0,0,0.5), 0 0 0 1px rgba(59,159,214,0.12)',
         'pill': '0 2px 8px rgba(0,0,0,0.2)',
       },
     },

@@ -12,15 +12,11 @@ export function Technologies() {
       className="relative scroll-mt-20 overflow-hidden py-28 px-4 sm:px-6 lg:px-8"
       aria-labelledby="technologies-heading"
     >
-      {/* Subtle background gradient for depth */}
+      <div className="absolute inset-0 bg-primary" aria-hidden />
       <div
-        className="absolute inset-0 bg-secondary"
-        aria-hidden
-      />
-      <div
-        className="absolute inset-0 opacity-40"
+        className="absolute inset-0 opacity-30"
         style={{
-          backgroundImage: `radial-gradient(ellipse 80% 50% at 50% 0%, rgba(14,165,233,0.06) 0%, transparent 50%)`,
+          backgroundImage: `radial-gradient(ellipse 60% 40% at 50% 0%, rgba(14,165,233,0.06) 0%, transparent 50%)`,
         }}
         aria-hidden
       />

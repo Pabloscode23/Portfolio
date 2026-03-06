@@ -138,7 +138,7 @@
   },
   "contact": {
     "title": "Contacto",
-    "subtitle": "Escríbeme",
+    "subtitle": "Pongámonos en contacto",
     "name": "Nombre",
     "email": "Correo",
     "message": "Mensaje",
@@ -153,6 +153,7 @@
     "error": "Error al enviar el mensaje"
   },
   "footer": {
+    "copyright": "© {{year}} Portafolio. Todos los derechos reservados.",
     "rights": "Todos los derechos reservados.",
     "github": "GitHub",
     "linkedin": "LinkedIn"

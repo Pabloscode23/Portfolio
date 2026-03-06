@@ -130,7 +130,10 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={submitting}
-        className="w-full rounded-lg bg-accent py-3 font-medium text-white transition-colors duration-300 hover:bg-accent-light focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary-950 disabled:opacity-60 disabled:cursor-not-allowed"
+        className="w-full rounded-lg py-3 font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary-950 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:shadow-lg"
+        style={{ backgroundColor: '#3B9FD6' }}
+        onMouseEnter={(e) => { if (!e.currentTarget.disabled) e.currentTarget.style.backgroundColor = '#3B9FD6' }}
+        onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#3B9FD6' }}
       >
         {submitting ? t('contact.sending') : t('contact.send')}
       </button>

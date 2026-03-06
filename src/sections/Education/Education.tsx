@@ -76,10 +76,10 @@ export function Education() {
             return (
               <li key={cert.id}>
                 <article className="rounded-2xl border border-white/[0.06] bg-primary-950/80 p-5 sm:p-6 shadow-card backdrop-blur-sm transition-all duration-300 hover:border-accent/20 hover:shadow-card-hover h-full flex flex-col">
-                  <p className="font-semibold text-primary-50 text-base leading-snug">
+                  <p className="font-semibold text-accent text-base leading-snug">
                     {name}
                   </p>
-                  <p className="text-accent font-medium mt-1.5 text-sm">
+                  <p className="text-primary-50 font-medium mt-1.5 text-sm">
                     {issuer}
                   </p>
                   {cert.credentialUrl && (

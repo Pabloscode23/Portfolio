@@ -13,6 +13,14 @@ export function Contact() {
       className="relative scroll-mt-20 overflow-hidden py-24 px-4 sm:px-6 lg:px-8"
       aria-labelledby="contact-heading"
     >
+      <div className="absolute inset-0 bg-primary" aria-hidden />
+      <div
+        className="absolute inset-0 opacity-30"
+        style={{
+          backgroundImage: `radial-gradient(ellipse 60% 40% at 80% 20%, rgba(14,165,233,0.08) 0%, transparent 50%)`,
+        }}
+        aria-hidden
+      />
       <div className="relative mx-auto max-w-6xl">
         <h2 id="contact-heading" className="text-4xl font-bold text-primary-50 sm:text-5xl tracking-tight">
           {t('contact.title')}

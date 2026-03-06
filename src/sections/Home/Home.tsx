@@ -13,7 +13,7 @@ export function Home() {
       <div
         className="absolute inset-0 opacity-50"
         style={{
-          backgroundImage: `radial-gradient(ellipse 70% 60% at 50% 40%, rgba(14,165,233,0.08) 0%, transparent 60%)`,
+          backgroundImage: `radial-gradient(ellipse 70% 60% at 50% 40%, rgba(82,181,236,0.08) 0%, transparent 60%)`,
         }}
         aria-hidden
       />
@@ -35,7 +35,10 @@ export function Home() {
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4 animate-fade-in">
           <a
             href="#about"
-            className="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 font-medium text-white shadow-lg transition-all duration-300 hover:bg-accent-light hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary"
+            className="inline-flex items-center justify-center rounded-lg px-6 py-3 font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary"
+            style={{ backgroundColor: '#3B9FD6' }}
+            onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#3B9FD6' }}
+            onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#3B9FD6' }}
           >
             {t('home.ctaExperience')}
           </a>

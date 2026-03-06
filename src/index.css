@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-accent: #3B9FD6;
+  --color-accent-hover: #3B9FD6;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -10,6 +15,42 @@
   body {
     @apply bg-primary text-primary-100 antialiased;
   }
+}
+
+.bg-accent {
+  background-color: #3B9FD6 !important;
+}
+
+.bg-accent\/80 {
+  background-color: rgba(59, 159, 214, 0.8) !important;
+}
+
+.text-accent,
+.text-accent\/90,
+span.text-accent {
+  color: #3B9FD6 !important;
+}
+
+button.bg-accent,
+a.bg-accent {
+  background-color: #3B9FD6 !important;
+  color: #ffffff !important;
+}
+
+button.bg-accent:hover,
+a.bg-accent:hover {
+  background-color: #3B9FD6 !important;
+  color: #ffffff !important;
+}
+
+.LanguageSwitch button.bg-accent {
+  background-color: #3B9FD6 !important;
+  color: #ffffff !important;
+}
+
+.LanguageSwitch button.bg-accent:hover {
+  background-color: #3B9FD6 !important;
+  color: #ffffff !important;
 }
 
 [data-theme="dark"] body,
@@ -36,13 +77,23 @@ html:not([data-theme="light"]) body {
 }
 
 [data-theme="light"] header.fixed a:hover {
-  color: #0284c7 !important;
+  color: #3B9FD6 !important;
   background-color: #e8e8e8 !important;
 }
 
 [data-theme="light"] header.fixed button:hover {
-  color: #0284c7 !important;
+  color: #3B9FD6 !important;
   background-color: #e8e8e8 !important;
+}
+
+[data-theme="light"] header.fixed .LanguageSwitch button[aria-pressed="true"],
+[data-theme="light"] header.fixed .LanguageSwitch button[aria-pressed="true"]:hover {
+  background-color: #3B9FD6 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="light"] header.fixed .LanguageSwitch button[aria-pressed="true"]:hover {
+  background-color: #3B9FD6 !important;
 }
 
 [data-theme="light"] header.fixed ul.bg-secondary {
@@ -52,6 +103,20 @@ html:not([data-theme="light"]) body {
 
 [data-theme="light"] header.fixed ul.bg-secondary a {
   color: #000000 !important;
+}
+
+@media (hover: none) {
+  header.fixed button.rounded-lg:hover,
+  header.fixed a.rounded-xl:hover {
+    background-color: transparent !important;
+  }
+}
+
+[data-theme="light"] @media (hover: none) {
+  header.fixed button.rounded-lg:hover,
+  header.fixed a.rounded-xl:hover {
+    background-color: transparent !important;
+  }
 }
 
 [data-theme="light"] footer {
@@ -65,7 +130,7 @@ html:not([data-theme="light"]) body {
 }
 
 [data-theme="light"] footer a:hover {
-  color: #0284c7 !important;
+  color: #3B9FD6 !important;
 }
 
 [data-theme="light"] main,
@@ -110,7 +175,7 @@ html:not([data-theme="light"]) body {
 }
 
 [data-theme="light"] main .text-accent {
-  color: #0284c7 !important;
+  color: #3B9FD6 !important;
 }
 
 [data-theme="light"] main .border-white\/\[0\.06\],
@@ -129,10 +194,15 @@ html:not([data-theme="light"]) body {
   background-color: #fafafa !important;
 }
 
-[data-theme="light"] main button.bg-accent,
-[data-theme="light"] main a.bg-accent {
-  background-color: #0284c7 !important;
+[data-theme="light"] button.bg-accent,
+[data-theme="light"] a.bg-accent {
+  background-color: #3B9FD6 !important;
   color: #ffffff !important;
+}
+
+[data-theme="light"] button.bg-accent:hover,
+[data-theme="light"] a.bg-accent:hover {
+  background-color: #3B9FD6 !important;
 }
 
 [data-theme="light"] main .rounded-full.bg-primary-800 {
@@ -155,6 +225,22 @@ html:not([data-theme="light"]) body {
   color: #171717 !important;
 }
 
+[data-theme="light"] #contact {
+  background-color: #f0f0f0 !important;
+}
+
+[data-theme="light"] #contact input,
+[data-theme="light"] #contact textarea {
+  background-color: #ffffff !important;
+  border-color: #d4d4d4 !important;
+  color: #171717 !important;
+}
+
+[data-theme="light"] #contact input::placeholder,
+[data-theme="light"] #contact textarea::placeholder {
+  color: #737373 !important;
+}
+
 [data-theme="light"] .LanguageSwitch {
   background-color: #e5e5e5 !important;
 }
@@ -163,7 +249,7 @@ html:not([data-theme="light"]) body {
   color: #000000 !important;
 }
 
-[data-theme="light"] .LanguageSwitch button.bg-accent {
-  background-color: #0284c7 !important;
-  color: #ffffff !important;
+[data-theme="light"] .LanguageSwitch button[aria-pressed="false"]:hover {
+  background-color: transparent !important;
+  color: #3B9FD6 !important;
 }

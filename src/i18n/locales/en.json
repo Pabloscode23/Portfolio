@@ -78,7 +78,7 @@
     },
     "trafficTicket": {
       "title": "Traffic Ticket Management System",
-      "description": "Traffic ticket management system developed by a team of five in collaboration with Universidad Cenfotec. React for the UI, .NET with Entity Framework for business logic, and MSSQL. Git and Azure DevOps for version control, CI, and project workflow; full SDLC and Scrum methodology.",
+      "description": "Traffic ticket management system developed by a team of five in collaboration with Cenfotec University. React for the UI, .NET with Entity Framework for business logic, and MSSQL. Git and Azure DevOps for version control, CI, and project workflow; full SDLC and Scrum methodology.",
       "contribution1": "Team development: React for the UI, .NET with Entity Framework for business logic, and MSSQL as the database.",
       "contribution2": "Git for version control and Azure DevOps for tasks, continuous integration, and project workflow.",
       "contribution3": "Full Software Development Life Cycle (SDLC) and Scrum: sprints, constant communication, and adaptation to changes.",
@@ -153,6 +153,7 @@
     "error": "Error sending message"
   },
   "footer": {
+    "copyright": "© {{year}} Portfolio. All rights reserved.",
     "rights": "All rights reserved.",
     "github": "GitHub",
     "linkedin": "LinkedIn"

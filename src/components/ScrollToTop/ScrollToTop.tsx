@@ -24,7 +24,10 @@ export function ScrollToTop() {
     <button
       type="button"
       onClick={scrollToTop}
-      className="fixed bottom-24 right-6 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-accent text-white shadow-lg transition-all duration-300 hover:bg-accent-light hover:scale-110 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary-950"
+      className="fixed bottom-24 right-6 z-40 flex h-12 w-12 items-center justify-center rounded-full text-white shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary-950"
+      style={{ backgroundColor: '#3B9FD6' }}
+      onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#3B9FD6' }}
+      onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#3B9FD6' }}
       aria-label="Scroll to top"
     >
       <svg

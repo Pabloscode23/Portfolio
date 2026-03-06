@@ -10,8 +10,8 @@ const NAV_ITEMS: NavItem[] = [
   { id: 'contact', labelKey: 'nav.contact', href: '#contact' },
 ]
 
-const GITHUB_URL = 'https://github.com' // Replace with your GitHub
-const LINKEDIN_URL = 'https://linkedin.com/in' // Replace with your LinkedIn
+const GITHUB_URL = 'https://github.com/Pabloscode23'
+const LINKEDIN_URL = 'https://www.linkedin.com/in/pnavarro23/'
 
 export function Footer() {
   const { t } = useTranslation()
@@ -63,7 +63,7 @@ export function Footer() {
           </div>
         </div>
         <p className="mt-8 text-center text-sm text-primary-500">
-          © {year} Portfolio. {t('footer.rights')}
+          {t('footer.copyright', { year })}
         </p>
       </div>
     </footer>

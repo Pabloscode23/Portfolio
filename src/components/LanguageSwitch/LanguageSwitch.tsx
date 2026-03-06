@@ -21,9 +21,16 @@ export function LanguageSwitch() {
           onClick={() => i18n.changeLanguage(code)}
           className={`rounded-md px-3 py-1.5 text-sm font-medium transition-all duration-200 ${
             i18n.language === code
-              ? 'bg-accent text-white shadow'
+              ? 'text-white shadow'
               : 'text-primary-300 hover:text-primary-100'
           }`}
+          style={i18n.language === code ? { backgroundColor: '#3B9FD6' } : undefined}
+          onMouseEnter={(e) => {
+            if (i18n.language === code) e.currentTarget.style.backgroundColor = '#3B9FD6'
+          }}
+          onMouseLeave={(e) => {
+            if (i18n.language === code) e.currentTarget.style.backgroundColor = '#3B9FD6'
+          }}
           aria-pressed={i18n.language === code}
           aria-label={`Language: ${label}`}
         >

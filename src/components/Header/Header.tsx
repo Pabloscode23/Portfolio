@@ -37,7 +37,7 @@ export function Header() {
           />
           <span className="text-xl font-semibold">{t('nav.brand')}</span>
         </a>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 sm:gap-2 isolate">
           <ul className="hidden md:flex items-center gap-1 lg:gap-4">
             {NAV_ITEMS.map((item) => (
               <li key={item.id}>
@@ -55,7 +55,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setMobileOpen((o) => !o)}
-            className="md:hidden rounded-lg p-2 text-primary-200 hover:bg-primary-800/50"
+            className="md:hidden rounded-lg p-2 min-w-[2.5rem] min-h-[2.5rem] flex items-center justify-center overflow-hidden text-primary-200 hover:bg-primary-800/50"
             aria-expanded={mobileOpen}
             aria-label="Toggle menu"
           >
