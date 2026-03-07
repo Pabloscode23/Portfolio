@@ -41,7 +41,8 @@
     "durationMonth": "1 month",
     "durationMonths": "{{count}} months",
     "durationLessThanMonth": "< 1 month",
-    "technologies": "Technologies"
+    "technologies": "Technologies",
+    "totalExperience": "Total experience"
   },
   "technologies": {
     "title": "Technologies I use",

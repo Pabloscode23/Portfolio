@@ -57,11 +57,38 @@ export function getDuration(item: ExperienceItem): { years: number; months: numb
   return { years, months: remainingMonths }
 }
 
+export function getTotalDuration(): { years: number; months: number } {
+  let totalMonthsSum = 0
+  for (const item of experience) {
+    totalMonthsSum += totalMonths(item.startDate, item.endDate)
+  }
+  const years = Math.floor(totalMonthsSum / 12)
+  const months = totalMonthsSum % 12
+  return { years, months }
+}
+
 export function formatDuration(
   item: ExperienceItem,
   t: (key: string, opts?: { count?: number }) => string
 ): string {
   const { years, months } = getDuration(item)
+  const parts: string[] = []
+  if (years > 0) {
+    parts.push(years === 1 ? t('about.durationYear') : t('about.durationYears', { count: years }))
+  }
+  if (months > 0) {
+    parts.push(months === 1 ? t('about.durationMonth') : t('about.durationMonths', { count: months }))
+  }
+  if (parts.length === 0) {
+    return t('about.durationLessThanMonth')
+  }
+  return parts.join(' ')
+}
+
+export function formatTotalDuration(
+  t: (key: string, opts?: { count?: number }) => string
+): string {
+  const { years, months } = getTotalDuration()
   const parts: string[] = []
   if (years > 0) {
     parts.push(years === 1 ? t('about.durationYear') : t('about.durationYears', { count: years }))

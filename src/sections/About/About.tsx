@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { experience, formatDuration } from '@/data/experience'
+import { experience, formatDuration, formatTotalDuration } from '@/data/experience'
 
 export function About() {
   const { t } = useTranslation()
@@ -38,9 +38,23 @@ export function About() {
           </div>
         </header>
 
-        <h3 className="text-sm font-semibold uppercase tracking-widest text-accent mb-6">
-          {t('about.subtitle')}
-        </h3>
+        <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-3">
+            <span
+              className="h-0.5 w-12 rounded-full bg-accent/80 shrink-0"
+              aria-hidden
+            />
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-accent">
+              {t('about.subtitle')}
+            </h3>
+          </div>
+          <span
+            className="rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent shrink-0"
+            aria-label={t('about.totalExperience')}
+          >
+            {formatTotalDuration(t)}
+          </span>
+        </div>
 
         <ul className="space-y-6" aria-label={t('about.subtitle')}>
           {experience.map((item) => (
