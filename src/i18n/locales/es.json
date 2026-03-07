@@ -35,7 +35,13 @@
       "point1": "Desarrollo y mantenimiento de una aplicación móvil multiplataforma con React Native, en conjunto con servicios backend en .NET (C#).",
       "point2": "Trabajo full-stack: integración de frontend con APIs, depuración y comunicación entre capas de la aplicación.",
       "point3": "Participación en equipo Scrum (planificación de sprints, stand-ups, entregas iterativas). Git con estrategias de branching y Azure DevOps para tareas y sprints."
-    }
+    },
+    "durationYear": "1 año",
+    "durationYears": "{{count}} años",
+    "durationMonth": "1 mes",
+    "durationMonths": "{{count}} meses",
+    "durationLessThanMonth": "< 1 mes",
+    "technologies": "Tecnologías"
   },
   "technologies": {
     "title": "Tecnologías que utilizo",

@@ -8,8 +8,8 @@ import logoSrc from '@/assets/PabloCode-modified.png'
 const NAV_ITEMS: NavItem[] = [
   { id: 'home', labelKey: 'nav.home', href: '#home' },
   { id: 'about', labelKey: 'nav.about', href: '#about' },
-  { id: 'projects', labelKey: 'nav.projects', href: '#projects' },
   { id: 'technologies', labelKey: 'nav.technologies', href: '#technologies' },
+  { id: 'projects', labelKey: 'nav.projects', href: '#projects' },
   { id: 'education', labelKey: 'nav.education', href: '#education' },
   { id: 'contact', labelKey: 'nav.contact', href: '#contact' },
 ]

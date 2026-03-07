@@ -17,8 +17,8 @@ export default function App() {
       <main>
         <Home />
         <About />
-        <Projects />
         <Technologies />
+        <Projects />
         <Education />
         <Contact />
       </main>

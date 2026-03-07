@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next'
-
-const EXPERIENCE_KEYS = ['tradestation', 'factork'] as const
+import { experience, formatDuration } from '@/data/experience'
 
 export function About() {
   const { t } = useTranslation()
@@ -44,36 +43,54 @@ export function About() {
         </h3>
 
         <ul className="space-y-6" aria-label={t('about.subtitle')}>
-          {EXPERIENCE_KEYS.map((key) => (
-            <li key={key}>
+          {experience.map((item) => (
+            <li key={item.id}>
               <article className="rounded-2xl border border-white/[0.06] bg-primary-950/80 p-6 sm:p-8 shadow-card backdrop-blur-sm transition-all duration-300 hover:border-accent/20 hover:shadow-card-hover">
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
                   <div>
                     <p className="font-semibold text-primary-50 text-lg">
-                      {t(`about.${key}.role`)}
+                      {t(`about.${item.id}.role`)}
                     </p>
                     <p className="text-accent font-medium">
-                      {t(`about.${key}.company`)}
+                      {t(`about.${item.id}.company`)}
                     </p>
                   </div>
-                  <p className="text-sm text-primary-500 whitespace-nowrap">
-                    {t(`about.${key}.date`)}
-                  </p>
+                  <div className="flex flex-col items-start sm:items-end gap-0.5">
+                    <p className="text-sm text-primary-500 whitespace-nowrap">
+                      {t(`about.${item.id}.date`)}
+                    </p>
+                    <p className="text-xs text-primary-400 whitespace-nowrap">
+                      {formatDuration(item, t)}
+                    </p>
+                  </div>
                 </div>
-                <ul className="mt-5 space-y-2.5" role="list">
+                <ul className="mt-5 space-y-2.5">
                   <li className="flex gap-3 text-primary-300 text-sm sm:text-base leading-relaxed">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/80" aria-hidden />
-                    <span>{t(`about.${key}.point1`)}</span>
+                    <span>{t(`about.${item.id}.point1`)}</span>
                   </li>
                   <li className="flex gap-3 text-primary-300 text-sm sm:text-base leading-relaxed">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/80" aria-hidden />
-                    <span>{t(`about.${key}.point2`)}</span>
+                    <span>{t(`about.${item.id}.point2`)}</span>
                   </li>
                   <li className="flex gap-3 text-primary-300 text-sm sm:text-base leading-relaxed">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/80" aria-hidden />
-                    <span>{t(`about.${key}.point3`)}</span>
+                    <span>{t(`about.${item.id}.point3`)}</span>
                   </li>
                 </ul>
+                <h4 className="mt-6 text-sm font-semibold uppercase tracking-widest text-accent">
+                  {t('about.technologies')}
+                </h4>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {item.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-full bg-primary-800 px-3 py-1 text-xs font-medium text-primary-300"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </article>
             </li>
           ))}

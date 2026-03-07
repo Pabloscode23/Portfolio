@@ -35,7 +35,13 @@
       "point1": "Contributed to the development and maintenance of a cross-platform mobile application using React Native, working with .NET (C#) backend services.",
       "point2": "Worked across the full-stack: frontend-backend integration with APIs, debugging, and smooth communication between application layers.",
       "point3": "Collaborated in a Scrum-based agile team (sprint planning, daily stand-ups, iterative delivery). Git with branching strategies and Azure DevOps for task and sprint management."
-    }
+    },
+    "durationYear": "1 year",
+    "durationYears": "{{count}} years",
+    "durationMonth": "1 month",
+    "durationMonths": "{{count}} months",
+    "durationLessThanMonth": "< 1 month",
+    "technologies": "Technologies"
   },
   "technologies": {
     "title": "Technologies I use",
