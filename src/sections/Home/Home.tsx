@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { StoryReveal } from '@/components/StoryReveal/StoryReveal'
 
 export function Home() {
   const { t } = useTranslation()
@@ -6,7 +7,7 @@ export function Home() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 pt-24 pb-20 sm:px-6 lg:px-8"
+      className="section-enter relative flex min-h-screen items-center justify-center overflow-hidden px-4 pt-24 pb-20 sm:px-6 lg:px-8"
       aria-labelledby="home-heading"
     >
       <div className="absolute inset-0 bg-primary" aria-hidden />
@@ -18,7 +19,7 @@ export function Home() {
         aria-hidden
       />
 
-      <div className="relative mx-auto max-w-3xl text-center">
+      <StoryReveal className="relative mx-auto max-w-3xl text-center">
         <p className="text-sm font-medium uppercase tracking-widest text-accent/90 mb-4 animate-fade-in">
           {t('home.role')}
         </p>
@@ -34,7 +35,7 @@ export function Home() {
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4 animate-fade-in">
           <a
-            href="#about"
+            href="#profile"
             className="inline-flex items-center justify-center rounded-lg px-6 py-3 font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary"
             style={{ backgroundColor: '#3B9FD6' }}
             onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#3B9FD6' }}
@@ -49,7 +50,7 @@ export function Home() {
             {t('home.ctaProjects')}
           </a>
         </div>
-      </div>
+      </StoryReveal>
     </section>
   )
 }

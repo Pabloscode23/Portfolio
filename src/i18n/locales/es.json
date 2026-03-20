@@ -2,7 +2,7 @@
   "nav": {
     "brand": "Portafolio | Pablo Navarro",
     "home": "Inicio",
-    "about": "Sobre mí",
+    "about": "Perfil Profesional",
     "technologies": "Tecnologías",
     "projects": "Proyectos",
     "education": "Educación",
@@ -17,7 +17,7 @@
     "ctaExperience": "Ver mi experiencia"
   },
   "about": {
-    "title": "Sobre mí",
+    "title": "Perfil Profesional",
     "subtitle": "Experiencia",
     "bio": "Desarrollador Full Stack con experiencia en entornos modernos y legacy. Me enfoco en modernización de aplicaciones, integración frontend-backend y trabajo en equipos ágiles.",
     "tradestation": {
@@ -42,11 +42,12 @@
     "durationMonths": "{{count}} meses",
     "durationLessThanMonth": "< 1 mes",
     "technologies": "Tecnologías",
-    "totalExperience": "Experiencia total"
+    "totalExperience": "Experiencia total",
+    "experienceTitle": "Experiencia laboral"
   },
   "technologies": {
     "title": "Tecnologías que utilizo",
-    "subtitle": "Herramientas y lenguajes con los que trabajo",
+    "subtitle": "Trabajo con herramientas y lenguajes que me permiten construir soluciones completas: desde interfaces modernas y accesibles, hasta APIs robustas, bases de datos seguras y flujos de despliegue confiables.",
     "frontend": "Front-End",
     "backend": "Back-End",
     "languages": "Lenguajes de programación",
@@ -57,7 +58,7 @@
   },
   "projects": {
     "title": "Proyectos",
-    "subtitle": "Trabajos académicos y profesionales",
+    "subtitle": "Aquí presento proyectos académicos y profesionales en los que participé de forma activa, destacando el contexto, las decisiones técnicas y el impacto logrado en cada caso.",
     "viewCode": "Ver código fuente",
     "technologies": "Tecnologías",
     "contributions": "Contribuciones clave",
@@ -108,7 +109,7 @@
   },
   "education": {
     "title": "Educación",
-    "subtitle": "Formación académica y certificaciones",
+    "subtitle": "Mi formación académica y certificaciones respaldan mi base técnica y mi aprendizaje continuo, combinando fundamentos de ingeniería de software con buenas prácticas modernas de desarrollo.",
     "university": {
       "degree": "Bachillerato en ingeniería de software",
       "school": "Universidad Cenfotec"
@@ -140,12 +141,18 @@
         "name": "Programación para Ciencia de Datos con Python",
         "issuer": "Udacity",
         "skills": ""
+      },
+      "awsCloudPractitionerEssentials": {
+        "name": "AWS Cloud Practitioner Essentials",
+        "issuer": "Amazon Web Services (AWS)",
+        "date": "Expedición: mar. 2026",
+        "skills": "AWS"
       }
     }
   },
   "contact": {
     "title": "Contacto",
-    "subtitle": "Pongámonos en contacto",
+    "subtitle": "Si quieres conversar sobre oportunidades, proyectos o colaboración, será un gusto conectar contigo. Estoy disponible para aportar en iniciativas web y móviles con enfoque en calidad.",
     "name": "Nombre",
     "email": "Correo",
     "message": "Mensaje",

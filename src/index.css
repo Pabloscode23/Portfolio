@@ -15,6 +15,54 @@
   body {
     @apply bg-primary text-primary-100 antialiased;
   }
+
+  p {
+    font-size: 20px;
+    line-height: 1.65;
+  }
+
+  main section li,
+  main section p {
+    font-size: 20px !important;
+    line-height: 1.65 !important;
+  }
+}
+
+
+.section-enter {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.story-reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  will-change: opacity, transform;
+  transition: opacity 0.48s ease, transform 0.48s ease;
+}
+
+.story-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .story-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .bg-accent {
@@ -106,13 +154,6 @@ html:not([data-theme="light"]) body {
 }
 
 @media (hover: none) {
-  header.fixed button.rounded-lg:hover,
-  header.fixed a.rounded-xl:hover {
-    background-color: transparent !important;
-  }
-}
-
-[data-theme="light"] @media (hover: none) {
   header.fixed button.rounded-lg:hover,
   header.fixed a.rounded-xl:hover {
     background-color: transparent !important;

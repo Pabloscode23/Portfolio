@@ -2,7 +2,7 @@
   "nav": {
     "brand": "Portfolio | Pablo Navarro",
     "home": "Home",
-    "about": "About me",
+    "about": "Professional Profile",
     "technologies": "Technologies",
     "projects": "Projects",
     "education": "Education",
@@ -17,7 +17,7 @@
     "ctaExperience": "See my experience"
   },
   "about": {
-    "title": "About me",
+    "title": "Professional Profile",
     "subtitle": "Experience",
     "bio": "Full Stack Developer with experience in both modern and legacy environments. I focus on application modernization, frontend-backend integration, and agile team collaboration.",
     "tradestation": {
@@ -42,11 +42,12 @@
     "durationMonths": "{{count}} months",
     "durationLessThanMonth": "< 1 month",
     "technologies": "Technologies",
-    "totalExperience": "Total experience"
+    "totalExperience": "Total experience",
+    "experienceTitle": "Work experience"
   },
   "technologies": {
     "title": "Technologies I use",
-    "subtitle": "Tools and languages I work with",
+    "subtitle": "I work with tools and languages that allow me to build end-to-end solutions: from modern, accessible interfaces to robust APIs, secure databases, and reliable deployment workflows.",
     "frontend": "Front-End",
     "backend": "Back-End",
     "languages": "Programming languages",
@@ -57,7 +58,7 @@
   },
   "projects": {
     "title": "Projects",
-    "subtitle": "Academic and professional work",
+    "subtitle": "Here you can find academic and professional projects where I contributed directly, highlighting the context, technical decisions, and measurable impact of each one.",
     "viewCode": "View source code",
     "technologies": "Technologies",
     "contributions": "Key contributions",
@@ -108,7 +109,7 @@
   },
   "education": {
     "title": "Education",
-    "subtitle": "Academic background and certifications",
+    "subtitle": "My academic background and certifications support a strong technical foundation and continuous learning, combining software engineering fundamentals with modern development best practices.",
     "university": {
       "degree": "Bachelor's degree in Software Engineering",
       "school": "Cenfotec University"
@@ -140,12 +141,18 @@
         "name": "Programming for Data Science with Python",
         "issuer": "Udacity",
         "skills": ""
+      },
+      "awsCloudPractitionerEssentials": {
+        "name": "AWS Cloud Practitioner Essentials",
+        "issuer": "Amazon Web Services (AWS)",
+        "date": "Issued: Mar 2026",
+        "skills": "AWS"
       }
     }
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Get in touch",
+    "subtitle": "If you would like to talk about opportunities, projects, or collaboration, I would be glad to connect. I am available to contribute to web and mobile initiatives focused on quality.",
     "name": "Name",
     "email": "Email",
     "message": "Message",

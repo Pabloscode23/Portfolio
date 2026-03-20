@@ -3,11 +3,11 @@ import { useTranslation } from 'react-i18next'
 import type { NavItem } from '@/types'
 import { LanguageSwitch } from '@/components/LanguageSwitch'
 import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle'
-import logoSrc from '@/assets/PabloCode-modified.png'
+import logoSrc from '@/assets/PabloCode.png'
 
 const NAV_ITEMS: NavItem[] = [
   { id: 'home', labelKey: 'nav.home', href: '#home' },
-  { id: 'about', labelKey: 'nav.about', href: '#about' },
+  { id: 'profile', labelKey: 'nav.about', href: '#profile' },
   { id: 'technologies', labelKey: 'nav.technologies', href: '#technologies' },
   { id: 'projects', labelKey: 'nav.projects', href: '#projects' },
   { id: 'education', labelKey: 'nav.education', href: '#education' },
@@ -23,7 +23,7 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-secondary/95 backdrop-blur-sm border-b border-secondary-mid/50 transition-all duration-300">
       <nav
-        className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+        className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
         aria-label="Main navigation"
       >
         <a
@@ -34,7 +34,7 @@ export function Header() {
           <img
             src={logoSrc}
             alt=""
-            className="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-transparent group-hover:ring-accent/40 transition-all duration-200"
+            className="h-11 w-11 shrink-0 object-cover transition-transform duration-200 group-hover:scale-105"
           />
           <span className="text-xl font-semibold">{t('nav.brand')}</span>
         </a>

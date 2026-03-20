@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { useTheme } from '@/contexts/ThemeContext'
 import { technologyCategories } from '@/data/technologies'
+import { StoryReveal } from '@/components/StoryReveal/StoryReveal'
 
 export function Technologies() {
   const { t } = useTranslation()
@@ -9,7 +10,7 @@ export function Technologies() {
   return (
     <section
       id="technologies"
-      className="relative scroll-mt-20 overflow-hidden py-28 px-4 sm:px-6 lg:px-8"
+      className="section-enter relative scroll-mt-20 overflow-hidden py-28 px-4 sm:px-6 lg:px-8"
       aria-labelledby="technologies-heading"
     >
       <div className="absolute inset-0 bg-primary" aria-hidden />
@@ -22,6 +23,7 @@ export function Technologies() {
       />
 
       <div className="relative mx-auto max-w-6xl">
+        <StoryReveal>
         <header className="mb-16 sm:mb-20">
           <h2
             id="technologies-heading"
@@ -34,16 +36,17 @@ export function Technologies() {
               className="h-0.5 w-12 rounded-full bg-accent/80 shrink-0"
               aria-hidden
             />
-            <p className="text-lg text-primary-400 max-w-2xl leading-relaxed">
+            <p className="text-primary-400 max-w-3xl leading-relaxed">
               {t('technologies.subtitle')}
             </p>
           </div>
         </header>
+        </StoryReveal>
 
         <div className="grid gap-6 sm:gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {technologyCategories.map((category) => (
+          {technologyCategories.map((category, index) => (
+            <StoryReveal key={category.id} delayMs={100 + index * 70}>
             <article
-              key={category.id}
               className="relative rounded-2xl border border-white/[0.06] bg-primary-950/80 p-6 sm:p-7 shadow-card backdrop-blur-md transition-all duration-300 hover:shadow-card-hover hover:border-accent/20"
             >
               {/* Category header with accent line */}
@@ -52,7 +55,7 @@ export function Technologies() {
                   className="h-0.5 w-8 shrink-0 rounded-full bg-accent/80"
                   aria-hidden
                 />
-                <h3 className="text-sm font-semibold uppercase tracking-widest text-accent">
+                <h3 className="text-base font-semibold uppercase tracking-widest text-accent">
                   {t(`technologies.${category.id}`)}
                 </h3>
               </div>
@@ -77,7 +80,7 @@ export function Technologies() {
                       >
                         <Icon className="h-4 w-4" aria-hidden style={{ color }} />
                       </span>
-                      <span className="text-sm font-medium text-primary-100 truncate max-w-[130px] sm:max-w-[180px]">
+                      <span className="text-base font-medium text-primary-100 truncate max-w-[130px] sm:max-w-[180px]">
                         {item.name}
                       </span>
                     </li>
@@ -85,6 +88,7 @@ export function Technologies() {
                 })}
               </ul>
             </article>
+            </StoryReveal>
           ))}
         </div>
       </div>

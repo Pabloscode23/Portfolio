@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { ContactForm } from '@/components/ContactForm'
 import { WHATSAPP_NUMBER, CONTACT_EMAIL } from '@/constants/contact'
+import { StoryReveal } from '@/components/StoryReveal/StoryReveal'
 
 const WA_URL = `https://wa.me/${WHATSAPP_NUMBER}`
 
@@ -10,7 +11,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative scroll-mt-20 overflow-hidden py-24 px-4 sm:px-6 lg:px-8"
+      className="section-enter relative scroll-mt-20 overflow-hidden py-24 px-4 sm:px-6 lg:px-8"
       aria-labelledby="contact-heading"
     >
       <div className="absolute inset-0 bg-primary" aria-hidden />
@@ -22,6 +23,7 @@ export function Contact() {
         aria-hidden
       />
       <div className="relative mx-auto max-w-6xl">
+        <StoryReveal>
         <h2 id="contact-heading" className="text-4xl font-bold text-primary-50 sm:text-5xl tracking-tight">
           {t('contact.title')}
         </h2>
@@ -30,14 +32,15 @@ export function Contact() {
             className="h-0.5 w-12 rounded-full bg-accent/80 shrink-0"
             aria-hidden
           />
-          <p className="text-lg text-primary-400">
+          <p className="text-primary-400 max-w-3xl leading-relaxed">
             {t('contact.subtitle')}
           </p>
         </div>
+        </StoryReveal>
         <div className="mt-14 flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
-          <div className="flex-1">
+          <StoryReveal className="flex-1" delayMs={80}>
             <ContactForm />
-          </div>
+          </StoryReveal>
           <div className="flex flex-col items-center gap-6 lg:w-80">
             <a
               href={`mailto:${CONTACT_EMAIL}`}

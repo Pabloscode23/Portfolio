@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { projects } from '@/data/projects'
 import { ImageCarousel } from '@/components/ImageCarousel/ImageCarousel'
+import { StoryReveal } from '@/components/StoryReveal/StoryReveal'
 
 export function Projects() {
   const { t } = useTranslation()
@@ -8,7 +9,7 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="relative scroll-mt-20 overflow-hidden bg-primary py-24 px-4 sm:px-6 lg:px-8"
+      className="section-enter relative scroll-mt-20 overflow-hidden bg-primary py-24 px-4 sm:px-6 lg:px-8"
       aria-labelledby="projects-heading"
     >
       <div className="absolute inset-0 bg-primary" aria-hidden />
@@ -21,7 +22,8 @@ export function Projects() {
       />
 
       <div className="relative mx-auto max-w-6xl">
-        <header className="mb-14">
+        <StoryReveal>
+        <header className="mb-16 sm:mb-20">
           <h2 id="projects-heading" className="text-4xl font-bold text-primary-50 sm:text-5xl tracking-tight">
             {t('projects.title')}
           </h2>
@@ -30,17 +32,19 @@ export function Projects() {
               className="h-0.5 w-12 rounded-full bg-accent/80 shrink-0"
               aria-hidden
             />
-            <p className="text-lg text-primary-400">
+            <p className="text-primary-400 max-w-3xl leading-relaxed">
               {t('projects.subtitle')}
             </p>
           </div>
         </header>
+        </StoryReveal>
 
         <ul className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          {projects.map((project) => {
+          {projects.map((project, index) => {
             const title = t(`projects.${project.titleKey}.title`)
             return (
               <li key={project.id} className="flex">
+                <StoryReveal delayMs={100 + index * 80} className="w-full">
                 <article className="flex w-full flex-col overflow-hidden rounded-2xl border border-white/[0.06] bg-primary-950/80 shadow-card backdrop-blur-sm transition-all duration-300 hover:border-accent/20 hover:shadow-card-hover">
                   <ImageCarousel images={project.images} alt={title} />
                   <div className="flex flex-1 flex-col p-6 sm:p-8">
@@ -51,14 +55,14 @@ export function Projects() {
                       {t(`projects.${project.titleKey}.description`)}
                     </p>
 
-                    <h4 className="mt-6 text-sm font-semibold uppercase tracking-widest text-accent">
+                    <h4 className="mt-7 text-base font-semibold uppercase tracking-widest text-accent">
                       {t('projects.contributions')}
                     </h4>
-                    <ul className="mt-3 space-y-2" role="list">
+                    <ul className="mt-3 space-y-2">
                       {Array.from({ length: project.contributionCount }, (_, i) => (
                         <li
                           key={i}
-                          className="flex gap-2 text-primary-300 text-sm sm:text-base leading-relaxed"
+                          className="flex gap-2 text-primary-300 leading-relaxed"
                         >
                           <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/80" aria-hidden />
                           <span>{t(`projects.${project.titleKey}.contribution${i + 1}`)}</span>
@@ -66,21 +70,21 @@ export function Projects() {
                       ))}
                     </ul>
 
-                    <h4 className="mt-6 text-sm font-semibold uppercase tracking-widest text-accent">
+                    <h4 className="mt-7 text-base font-semibold uppercase tracking-widest text-accent">
                       {t('projects.technologies')}
                     </h4>
                     <div className="mt-3 flex flex-wrap gap-2">
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="rounded-full bg-primary-800 px-3 py-1 text-xs font-medium text-primary-300"
+                          className="rounded-full bg-primary-800 px-3.5 py-1.5 text-sm font-medium text-primary-300"
                         >
                           {tech}
                         </span>
                       ))}
                     </div>
 
-                    <h4 className="mt-6 text-sm font-semibold uppercase tracking-widest text-accent">
+                    <h4 className="mt-7 text-base font-semibold uppercase tracking-widest text-accent">
                       {t('projects.impact')}
                     </h4>
                     <p className="mt-2 text-primary-300 leading-relaxed">
@@ -102,6 +106,7 @@ export function Projects() {
                     )}
                   </div>
                 </article>
+                </StoryReveal>
               </li>
             )
           })}

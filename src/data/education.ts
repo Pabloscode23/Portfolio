@@ -1,11 +1,14 @@
+import awsCertificatePdf from '@/assets/AWSCloudPractitioner.pdf'
+
 export interface Certification {
   id: string
   credentialUrl: string
 }
 
-export const CERTIFICATION_IDS = ['scrum', 'freecodecamp', 'efset', 'udemy', 'udacity'] as const
+export const CERTIFICATION_IDS = ['awsCloudPractitionerEssentials', 'scrum', 'freecodecamp', 'efset', 'udemy', 'udacity'] as const
 
 export const certifications: Certification[] = [
+  { id: 'awsCloudPractitionerEssentials', credentialUrl: awsCertificatePdf },
   { id: 'scrum', credentialUrl: 'https://www.scrumstudy.com/certification/verify?type=SFC&number=1023375' },
   { id: 'freecodecamp', credentialUrl: 'https://www.freecodecamp.org/certification/pabloscode23/javascript-algorithms-and-data-structures' },
   { id: 'efset', credentialUrl: 'https://cert.efset.org/oz3QtY' },
