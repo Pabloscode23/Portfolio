@@ -69,10 +69,13 @@ export function ContactForm() {
     }
   }
 
+  const fieldClass =
+    'mt-1 w-full rounded-lg border border-primary-600 bg-primary-800 px-4 py-2 text-xl leading-relaxed text-primary-100 placeholder:text-primary-500 placeholder:text-xl focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent'
+
   return (
-    <form onSubmit={handleSubmit} className="mx-auto max-w-lg space-y-4">
+    <form onSubmit={handleSubmit} className="mx-auto max-w-lg space-y-4 text-xl leading-relaxed">
       <div>
-        <label htmlFor="contact-name" className="block text-sm font-medium text-primary-200">
+        <label htmlFor="contact-name" className="block font-medium text-primary-200">
           {t('contact.name')}
         </label>
         <input
@@ -80,19 +83,19 @@ export function ContactForm() {
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="mt-1 w-full rounded-lg border border-primary-600 bg-primary-800 px-4 py-2 text-primary-100 placeholder-primary-500 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+          className={fieldClass}
           placeholder={t('contact.name')}
           aria-invalid={!!errors.name}
           aria-describedby={errors.name ? 'name-error' : undefined}
         />
         {errors.name && (
-          <p id="name-error" className="mt-1 text-sm text-red-400" role="alert">
+          <p id="name-error" className="mt-1 text-xl text-red-400" role="alert">
             {errors.name}
           </p>
         )}
       </div>
       <div>
-        <label htmlFor="contact-email" className="block text-sm font-medium text-primary-200">
+        <label htmlFor="contact-email" className="block font-medium text-primary-200">
           {t('contact.email')}
         </label>
         <input
@@ -100,19 +103,19 @@ export function ContactForm() {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="mt-1 w-full rounded-lg border border-primary-600 bg-primary-800 px-4 py-2 text-primary-100 placeholder-primary-500 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+          className={fieldClass}
           placeholder={t('contact.email')}
           aria-invalid={!!errors.email}
           aria-describedby={errors.email ? 'email-error' : undefined}
         />
         {errors.email && (
-          <p id="email-error" className="mt-1 text-sm text-red-400" role="alert">
+          <p id="email-error" className="mt-1 text-xl text-red-400" role="alert">
             {errors.email}
           </p>
         )}
       </div>
       <div>
-        <label htmlFor="contact-message" className="block text-sm font-medium text-primary-200">
+        <label htmlFor="contact-message" className="block font-medium text-primary-200">
           {t('contact.message')}
         </label>
         <textarea
@@ -120,31 +123,31 @@ export function ContactForm() {
           rows={4}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="mt-1 w-full rounded-lg border border-primary-600 bg-primary-800 px-4 py-2 text-primary-100 placeholder-primary-500 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+          className={fieldClass}
           placeholder={t('contact.message')}
           aria-invalid={!!errors.message}
           aria-describedby={errors.message ? 'message-error' : undefined}
         />
         {errors.message && (
-          <p id="message-error" className="mt-1 text-sm text-red-400" role="alert">
+          <p id="message-error" className="mt-1 text-xl text-red-400" role="alert">
             {errors.message}
           </p>
         )}
       </div>
       {status === 'success' && (
-        <p className="text-sm text-green-400" role="status">
+        <p className="text-xl text-green-400" role="status">
           {t('contact.success')}
         </p>
       )}
       {status === 'error' && (
-        <p className="text-sm text-red-400" role="alert">
+        <p className="text-xl text-red-400" role="alert">
           {t('contact.error')}
         </p>
       )}
       <button
         type="submit"
         disabled={submitting}
-        className="w-full rounded-lg py-3 font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary-950 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:shadow-lg"
+        className="w-full rounded-lg py-3 text-xl font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary-950 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:shadow-lg"
         style={{ backgroundColor: '#3B9FD6' }}
         onMouseEnter={(e) => { if (!e.currentTarget.disabled) e.currentTarget.style.backgroundColor = '#3B9FD6' }}
         onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#3B9FD6' }}
