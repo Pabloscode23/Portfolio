@@ -39,12 +39,12 @@ export function Header() {
           <span className="text-xl font-semibold">{t('nav.brand')}</span>
         </a>
         <div className="flex items-center gap-1 sm:gap-2 isolate">
-          <ul className="hidden md:flex items-center gap-1 lg:gap-4">
+          <ul className="hidden lg:flex lg:flex-nowrap lg:items-center gap-1 xl:gap-3">
             {NAV_ITEMS.map((item) => (
-              <li key={item.id}>
+              <li key={item.id} className="shrink-0">
                 <a
                   href={item.href}
-                  className="rounded-lg px-3 py-2 text-sm font-medium text-primary-200 hover:text-accent hover:bg-primary-800/50 transition-colors duration-200"
+                  className="block whitespace-nowrap rounded-lg px-2 xl:px-3 py-2 font-medium text-primary-200 hover:text-accent hover:bg-primary-800/50 transition-colors duration-200"
                 >
                   {t(item.labelKey)}
                 </a>
@@ -56,7 +56,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setMobileOpen((o) => !o)}
-            className="md:hidden rounded-lg p-2 min-w-[2.5rem] min-h-[2.5rem] flex items-center justify-center overflow-hidden text-primary-200 hover:bg-primary-800/50"
+            className="lg:hidden rounded-lg p-2 min-w-[2.5rem] min-h-[2.5rem] flex items-center justify-center overflow-hidden text-primary-200 hover:bg-primary-800/50"
             aria-expanded={mobileOpen}
             aria-label="Toggle menu"
           >
@@ -71,7 +71,7 @@ export function Header() {
         </div>
       </nav>
       {mobileOpen && (
-        <ul className="md:hidden border-t border-secondary-mid/50 bg-secondary px-4 py-4 flex flex-col gap-1">
+        <ul className="lg:hidden border-t border-secondary-mid/50 bg-secondary px-4 py-4 flex flex-col gap-1">
           {NAV_ITEMS.map((item) => (
             <li key={item.id}>
               <a

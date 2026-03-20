@@ -19,12 +19,37 @@ export function Footer() {
 
   return (
     <footer className="border-t border-secondary-mid/50 bg-secondary py-12">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 md:pr-28 lg:pl-8 lg:pr-36 xl:pr-40">
         <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
-          <nav aria-label="Footer navigation">
-            <ul className="flex flex-wrap justify-center gap-4">
+          <nav aria-label="Footer navigation" className="w-full md:max-w-none md:mx-0">
+            <div className="flex flex-col items-center gap-3 md:hidden">
+              <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-center text-primary-300">
+                {NAV_ITEMS.slice(0, 3).map((item) => (
+                  <a
+                    key={item.id}
+                    href={item.href}
+                    className="shrink-0 px-1 text-primary-300 hover:text-accent transition-colors duration-200"
+                  >
+                    {t(item.labelKey)}
+                  </a>
+                ))}
+              </div>
+              <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-center text-primary-300">
+                {NAV_ITEMS.slice(3, 6).map((item) => (
+                  <a
+                    key={item.id}
+                    href={item.href}
+                    className="shrink-0 px-1 text-primary-300 hover:text-accent transition-colors duration-200"
+                  >
+                    {t(item.labelKey)}
+                  </a>
+                ))}
+              </div>
+            </div>
+            <ul className="hidden md:flex md:flex-wrap md:justify-start md:gap-x-4 md:gap-y-3 md:text-left text-primary-300">
               {NAV_ITEMS.map((item) => (
-                <li key={item.id}>
+                <li key={item.id} className="md:shrink-0">
                   <a
                     href={item.href}
                     className="text-primary-300 hover:text-accent transition-colors duration-200"
