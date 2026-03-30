@@ -3,3 +3,4 @@ export const CONTACT_EMAIL = 'pablo.navarro.eng@gmail.com'
 
 /** Formspree form ID for the contact form. Create a form at https://formspree.io and replace this. */
 export const FORMSPREE_FORM_ID = import.meta.env.VITE_FORMSPREE_FORM_ID || ''
+
